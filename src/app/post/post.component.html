@@ -1,0 +1,63 @@
+<section>
+  <div class="currentPost" *ngIf="currentPost; else loading">
+    <img src="{{ currentPost.cover }}" />
+    <div>
+      <h2>{{ currentPost.title }}</h2>
+      <p class="content">{{ currentPost.content }}</p>
+
+      <button
+        class="cancel"
+        (click)="enableEdit()"
+        *ngIf="editMode; else cancel"
+      >
+        Cancel Edit
+      </button>
+
+      <ng-template #cancel>
+        <button class="edit" (click)="enableEdit()">Edit Post</button>
+      </ng-template>
+    </div>
+  </div>
+
+  <div *ngIf="editMode">
+    <div *ngIf="!busy">
+      <form (ngSubmit)="editPost(editForm.value)" [formGroup]="editForm">
+        <p>Edit the current post below.</p>
+
+        <div class="formcontrol">
+          <label for="title">Title</label>
+          <input type="text" formControlName="title" />
+        </div>
+
+        <div class="formcontrol">
+          <label for="content">Content</label>
+          <textarea formControlName="content"></textarea>
+        </div>
+
+        <div class="formcontrol">
+          <label for="cover" class="cover">Choose a Cover</label>
+          <input
+            type="file"
+            name="cover"
+            id="cover"
+            (change)="handleInput($event)"
+          />
+        </div>
+
+        <input type="submit" value="Submit" />
+      </form>
+      <button class="delete" (click)="deletePost(currentId)">
+        Delete Post
+      </button>
+    </div>
+  </div>
+
+  <ng-template #loading>
+    <div class="loader">
+      <div class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </ng-template>
+</section>

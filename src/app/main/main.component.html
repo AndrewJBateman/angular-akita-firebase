@@ -1,0 +1,31 @@
+<header>
+  <img src="../../assets/Group 1.svg" />
+  <div>
+    <h1>
+      Use Akita to <br />
+      manage the state of your application
+    </h1>
+    <a class="cta" [routerLink]="['/addpost']">Create a New Post</a>
+  </div>
+</header>
+
+<div class="loading" *ngIf="loading$ | async; else posts">
+  <div class="lds-circle"><div></div></div>
+  <h2>Loading Akitas State</h2>
+</div>
+
+<ng-template #posts>
+  <h2>Posts</h2>
+  <section class="posts">
+    <div *ngFor="let post of posts$ | async" class="post">
+      <div
+        class="cover"
+        [ngStyle]="{ 'background-image': 'url(' + post.cover + ')' }"
+      ></div>
+      <div>
+        <h2>{{ post.title }}</h2>
+        <a [routerLink]="['/post', post.id]">Check Post</a>
+      </div>
+    </div>
+  </section>
+</ng-template>
