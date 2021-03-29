@@ -4,10 +4,11 @@ import { PostsQuery } from '../state/posts.query';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Post } from '../state/post.model';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { untilDestroyed } from 'ngx-take-until-destroy';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { PostsStore } from '../state/posts.store';
 import { map, take } from 'rxjs/operators';
 
+@UntilDestroy()
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
@@ -34,7 +35,8 @@ export class PostComponent implements OnInit, OnDestroy {
     oldcover: new FormControl('', Validators.required),
   });
 
-  public getPost() {
+  // get post if id is not null
+  public getPost(): void {
     if (this.postsService.getPostEntity(this.currentId) !== undefined) {
       this.postsService
         .getPostEntity(this.currentId)
@@ -65,7 +67,6 @@ export class PostComponent implements OnInit, OnDestroy {
                   })
                 )
                 .subscribe((postData) => {
-                  console.log(postData);
                   this.currentPost = postData;
 
                   //edit form handling here too
@@ -83,9 +84,9 @@ export class PostComponent implements OnInit, OnDestroy {
     }
   }
 
-  public handleInput($event: Event) {
+  public handleInput($event: Event): any {
     this.image = $event.target['files'];
-    console.log(this.image);
+    console.log("this.image: ", this.image, typeof(this.image));
   }
 
   public enableEdit() {
@@ -101,7 +102,7 @@ export class PostComponent implements OnInit, OnDestroy {
   }
 
   //delete the post
-  public async deletePost(postId: string) {
+  public async deletePost(postId: string): Promise<void> {
     this.postsService.remove(postId, this.currentPost.fileref);
     this.router.navigate(['/']);
   }

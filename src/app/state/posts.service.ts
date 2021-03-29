@@ -38,11 +38,11 @@ export class PostsService {
   private collection = this.firestore.collection('posts');
 
   // pass postsStore entity
-  public connect() {
+  public connect(): Observable<Post[]> {
     return syncCollection(this.collection, this.postsStore);
   }
 
-  get() {
+  get(): Observable<Post[]> {
     return this.http.get<Post[]>('https://api.com').pipe(
       tap((entities) => {
         this.postsStore.set(entities);
@@ -51,7 +51,7 @@ export class PostsService {
   }
 
   // get id object from Akita
-  getPostEntity(id: ID) {
+  getPostEntity(id: ID): Observable<any> {
     if (this.postsQuery.hasEntity(id)) {
       return this.postsQuery.selectEntity(id);
     }
@@ -68,7 +68,7 @@ export class PostsService {
     };
 
     let p = await this.firestore.collection('posts').add(newpost);
-    console.log(p.path);
+    console.log("p.path", p.path);
     this.setPercentage(null);
   }
 

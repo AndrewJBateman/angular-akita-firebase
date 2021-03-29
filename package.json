@@ -23,9 +23,9 @@
     "@datorama/akita": "^6.1.2",
     "@datorama/akita-ng-entity-service": "^6.0.0",
     "@datorama/akita-ng-router-store": "^6.0.0",
+    "@ngneat/until-destroy": "^8.0.4",
     "akita-ng-fire": "^3.1.6",
     "firebase": "^8.3.1",
-    "ngx-take-until-destroy": "^5.4.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"

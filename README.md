@@ -1,6 +1,6 @@
 # :zap: Angular Akita Firebase
 
-* Angular 11 app using [Akita state management](https://datorama.github.io/akita/) to Create, Read, Update & Delete (CRUD) functions to access a Firebase database
+* Angular 11 app using [Akita state management](https://datorama.github.io/akita/) and Create, Read, Update & Delete (CRUD) functions to interface with a Firebase database. Tutorial code from Aldo Caamal with some updates - see [:clap: Inspiration](#clap-inspiration) below
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-akita-firebase?style=for-the-badge)
 ![GitHub issues](https://img.shields.io/github/issues/AndrewJBateman/angular-akita-firebase?style=for-the-badge)
@@ -27,7 +27,7 @@
 
 ## :books: General info
 
-* f
+* Akita used to create the posts.store.ts - an [Akita Entity Store](https://datorama.github.io/akita/docs/entities/entity-store) of single objects that is the single source of truth
 
 ## :camera: Screenshots
 
@@ -37,7 +37,7 @@
 
 * [Angular framework v11](https://angular.io/)
 * [Google Firebase](https://firebase.google.com)
-* [RxJS operator until-destroy](https://github.com/ngneat/until-destroy/#use-with-ivy) replaces [ngx-take-until-destroy](https://www.npmjs.com/package/ngx-take-until-destroy) instead of using Angular ngDestroy lifecycle
+* [@ngneat operator until-destroy](https://github.com/ngneat/until-destroy/#use-with-ivy) replaces [ngx-take-until-destroy](https://www.npmjs.com/package/ngx-take-until-destroy) to unsubscribe from observables when component destroyed, instead of using Angular ngDestroy lifecycle
 * [Akita State Management for JS](https://datorama.github.io/akita/)
 * [Akita Ng Entity Service](https://datorama.github.io/akita/docs/angular/entity-service/)
 * [Typescript Partials](https://www.typescriptlang.org/docs/handbook/utility-types.html) used to construct types with all properties set to optional.
