@@ -72,7 +72,7 @@
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working but needs changes
+* Status: Working but needs changes. Add Firebase authentication to access database
 * To-Do:  Replace all styling and consider Postgres storage. Consider Tailwind for styling? Expand on Akita functions.
 
 ## :clap: Inspiration
