@@ -51,7 +51,7 @@ export class PostsService {
   }
 
   // get id object from Akita
-  getPostEntity(id: ID): Observable<any> {
+  getPostEntity(id: ID): Observable<Post> {
     if (this.postsQuery.hasEntity(id)) {
       return this.postsQuery.selectEntity(id);
     }

@@ -1,12 +1,12 @@
 # :zap: Angular Akita Firebase
 
-* Angular 11 app using [Akita state management](https://datorama.github.io/akita/) and Create, Read, Update & Delete (CRUD) functions to interface with a Firebase database. Tutorial code from Aldo Caamal with some updates - see [:clap: Inspiration](#clap-inspiration) below
+* Angular app using [Akita state management](https://datorama.github.io/akita/) and Create, Read, Update & Delete (CRUD) functions to interface with a Firebase database. Tutorial code from Aldo Caamal with some updates - see [:clap: Inspiration](#clap-inspiration) below
+* **Note:** to open web links in a new window use: _ctrl+click on link_
 
-![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-akita-firebase?style=for-the-badge)
-![GitHub issues](https://img.shields.io/github/issues/AndrewJBateman/angular-akita-firebase?style=for-the-badge)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/angular-akita-firebase?style=for-the-badge)
-![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/angular-akita-firebase?style=for-the-badge)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/AndrewJBateman/angular-akita-firebase?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-akita-firebase?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/angular-akita-firebase?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/angular-akita-firebase?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/angular-akita-firebase?style=plastic)
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -23,6 +23,7 @@
   * [:cool: Features](#cool-features)
   * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
+  * [:file_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
@@ -79,6 +80,10 @@
 * [10 Reasons Why You Should Start Using Akita as Your State Management Solution](https://engineering.datorama.com/10-reasons-why-you-should-start-using-akita-as-your-state-management-solution-66b63d033fec)
 * [Free svg site](https://freesvg.org/) for free svgs
 
+## :file_folder: License
+
+* This project is licensed under the terms of the MIT license.
+
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
