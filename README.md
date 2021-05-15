@@ -36,11 +36,12 @@
 
 ## :signal_strength: Technologies
 
-* [Angular framework v11](https://angular.io/)
-* [Google Firebase](https://firebase.google.com)
-* [@ngneat operator until-destroy](https://github.com/ngneat/until-destroy/#use-with-ivy) replaces [ngx-take-until-destroy](https://www.npmjs.com/package/ngx-take-until-destroy) to unsubscribe from observables when component destroyed, instead of using Angular ngDestroy lifecycle
-* [Akita State Management for JS](https://datorama.github.io/akita/)
-* [Akita Ng Entity Service](https://datorama.github.io/akita/docs/angular/entity-service/)
+* [Angular framework v12](https://angular.io/)
+* [Google Firebase v8](https://firebase.google.com)
+* [@ngneat operator until-destroy v8](https://github.com/ngneat/until-destroy/#use-with-ivy) replaces [ngx-take-until-destroy](https://www.npmjs.com/package/ngx-take-until-destroy) to unsubscribe from observables when component destroyed, instead of using Angular ngDestroy lifecycle
+* [Akita State Management for JS v6](https://datorama.github.io/akita/)
+* [Akita Ng Entity Service v6](https://datorama.github.io/akita/docs/angular/entity-service/)
+* [akita-ng-fire v5](https://www.npmjs.com/package/akita-ng-fire) to simplify the connection between Akita and Firebase.
 * [Typescript Partials](https://www.typescriptlang.org/docs/handbook/utility-types.html) used to construct types with all properties set to optional.
 
 ## :floppy_disk: Setup
