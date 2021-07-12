@@ -32,7 +32,7 @@
 
 ## :camera: Screenshots
 
-![Angular page](./img/home.jpg)
+* N/A
 
 ## :signal_strength: Technologies
 
@@ -47,6 +47,7 @@
 ## :floppy_disk: Setup
 
 * Run `npm i` to install dependencies.
+* Add to `environments/environment.ts`: Firebase realtime database access credentials
 * Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 * Run `npm run build` for a production build with css purging.
 * Run `http-server` to view build on an apple/android phone or simulator (pick 2nd http address supplied)
@@ -72,7 +73,7 @@
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working but needs changes. Add Firebase authentication to access database
+* Status: Working. Add Firebase authentication to access database
 * To-Do:  Replace all styling and consider Postgres storage. Consider Tailwind for styling? Expand on Akita functions.
 
 ## :clap: Inspiration
