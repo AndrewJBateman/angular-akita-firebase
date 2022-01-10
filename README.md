@@ -29,19 +29,20 @@
 ## :books: General info
 
 * Akita used to create the posts.store.ts - an [Akita Entity Store](https://datorama.github.io/akita/docs/entities/entity-store) of single objects that is the single source of truth
+* Akita is not being maintained and they themselves recommend using an equivalent reactive store 'https://ngneat.github.io/elf/'
 
 ## :camera: Screenshots
 
-* N/A
+![Example screenshot](./imgs/posts.png)
 
 ## :signal_strength: Technologies
 
-* [Angular framework v12](https://angular.io/)
-* [Google Firebase v8](https://firebase.google.com)
-* [@ngneat operator until-destroy v8](https://github.com/ngneat/until-destroy/#use-with-ivy) replaces [ngx-take-until-destroy](https://www.npmjs.com/package/ngx-take-until-destroy) to unsubscribe from observables when component destroyed, instead of using Angular ngDestroy lifecycle
-* [Akita State Management for JS v6](https://datorama.github.io/akita/)
-* [Akita Ng Entity Service v6](https://datorama.github.io/akita/docs/angular/entity-service/)
-* [akita-ng-fire v5](https://www.npmjs.com/package/akita-ng-fire) to simplify the connection between Akita and Firebase.
+* [Angular framework v13](https://angular.io/)
+* [Google Firebase v9](https://firebase.google.com)
+* [@ngneat operator until-destroy v9](https://github.com/ngneat/until-destroy/#use-with-ivy) replaces [ngx-take-until-destroy](https://www.npmjs.com/package/ngx-take-until-destroy) to unsubscribe from observables when component destroyed, instead of using Angular ngDestroy lifecycle
+* [Akita State Management for JS v7](https://datorama.github.io/akita/)
+* [Akita Ng Entity Service v7](https://datorama.github.io/akita/docs/angular/entity-service/)
+* [akita-ng-fire v6](https://www.npmjs.com/package/akita-ng-fire) to simplify the connection between Akita and Firebase.
 * [Typescript Partials](https://www.typescriptlang.org/docs/handbook/utility-types.html) used to construct types with all properties set to optional.
 
 ## :floppy_disk: Setup
@@ -61,10 +62,22 @@
 
 ## :computer: Code Examples
 
-* `` - tba
+* `posts.service.ts` function to load post to Firebase database while showing percentage progress
 
 ```typescript
+  async add(post: Post, files: any) {
+    await this.uploadImage(files);
 
+    let newpost = {
+      title: post['title'],
+      content: post['content'],
+      cover: this.downloadURL,
+      fileref: this.filepath,
+    };
+
+    let p = await this.firestore.collection('posts').add(newpost);
+    this.setPercentage(null);
+  }
 ```
 
 ## :cool: Features
@@ -73,8 +86,8 @@
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working. Add Firebase authentication to access database
-* To-Do:  Replace all styling and consider Postgres storage. Consider Tailwind for styling? Expand on Akita functions.
+* Status: Working. Add Firebase authentication to access database - bypassed by setting access to 'true' in Firebase rules
+* To-Do:  Replace all styling and consider Postgres storage. Consider Tailwind for styling? Expand on Akita functions. Fix error where it does not find the localhost/xxx address when in dev server
 
 ## :clap: Inspiration
 
