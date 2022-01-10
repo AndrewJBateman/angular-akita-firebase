@@ -1,4 +1,4 @@
-import { AngularFirestoreCollection } from '@angular/fire/firestore';
+import { AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { EntityStore, withTransaction } from '@datorama/akita';
 
 export function syncCollection<T>(

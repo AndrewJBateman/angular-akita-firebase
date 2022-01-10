@@ -7,8 +7,8 @@ import { tap } from 'rxjs/operators';
 
 import { Observable, BehaviorSubject } from 'rxjs';
 import { syncCollection } from '../libs/syncCollection';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { AngularFireStorage } from '@angular/fire/storage';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { PostsQuery } from './posts.query';
 
 @Injectable({ providedIn: 'root' })
@@ -42,8 +42,9 @@ export class PostsService {
     return syncCollection(this.collection, this.postsStore);
   }
 
+  // note the website https://api.com is no longer available- replaced with rick and morty
   get(): Observable<Post[]> {
-    return this.http.get<Post[]>('https://api.com').pipe(
+    return this.http.get<Post[]>('https://rickandmortyapi.com/api').pipe(
       tap((entities) => {
         this.postsStore.set(entities);
       })
@@ -68,7 +69,6 @@ export class PostsService {
     };
 
     let p = await this.firestore.collection('posts').add(newpost);
-    console.log("p.path", p.path);
     this.setPercentage(null);
   }
 
