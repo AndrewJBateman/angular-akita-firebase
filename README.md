@@ -37,7 +37,7 @@
 
 ## :signal_strength: Technologies
 
-* [Angular framework v13](https://angular.io/)
+* [Angular framework v14](https://angular.io/)
 * [Google Firebase v9](https://firebase.google.com)
 * [@ngneat operator until-destroy v9](https://github.com/ngneat/until-destroy/#use-with-ivy) replaces [ngx-take-until-destroy](https://www.npmjs.com/package/ngx-take-until-destroy) to unsubscribe from observables when component destroyed, instead of using Angular ngDestroy lifecycle
 * [Akita State Management for JS v7](https://datorama.github.io/akita/)
@@ -56,7 +56,6 @@
 
 ## :wrench: Testing
 
-* Run `ng lint` to lint all files using tslint
 * Run `ng test` to run Jasmine unit tests via [Karma](https://karma-runner.github.io).
 * Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
@@ -82,12 +81,12 @@
 
 ## :cool: Features
 
-* tba
+* Uses Akita state management, built on top of RxJS data streams to create an Observable Data Store model.
 
 ## :clipboard: Status & To-Do List
 
 * Status: Working. Add Firebase authentication to access database - bypassed by setting access to 'true' in Firebase rules
-* To-Do:  Replace all styling and consider Postgres storage. Consider Tailwind for styling? Expand on Akita functions. Fix error where it does not find the localhost/xxx address when in dev server
+* To-Do:  Nothing
 
 ## :clap: Inspiration
 
