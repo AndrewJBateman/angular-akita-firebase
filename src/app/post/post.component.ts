@@ -3,7 +3,7 @@ import { PostsService } from '../state/posts.service';
 import { PostsQuery } from '../state/posts.query';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Post } from '../state/post.model';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { PostsStore } from '../state/posts.store';
 import { map, take } from 'rxjs/operators';
@@ -29,10 +29,10 @@ export class PostComponent implements OnInit, OnDestroy {
   public image: any;
   public busy: boolean;
 
-  public editForm = new FormGroup({
-    title: new FormControl('', Validators.required),
-    content: new FormControl('', Validators.required),
-    oldcover: new FormControl('', Validators.required),
+  public editForm = new UntypedFormGroup({
+    title: new UntypedFormControl('', Validators.required),
+    content: new UntypedFormControl('', Validators.required),
+    oldcover: new UntypedFormControl('', Validators.required),
   });
 
   // get post if id is not null

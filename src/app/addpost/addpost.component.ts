@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Post } from '../state/post.model';
 import { PostsService } from '../state/posts.service';
@@ -14,10 +14,10 @@ export class AddpostComponent implements OnInit {
 
   public percentage = this.postsService.percentage;
   public image: any;
-  public postForm = new FormGroup({
-    title: new FormControl('', Validators.required),
-    content: new FormControl('', Validators.required),
-    cover: new FormControl('', Validators.required),
+  public postForm = new UntypedFormGroup({
+    title: new UntypedFormControl('', Validators.required),
+    content: new UntypedFormControl('', Validators.required),
+    cover: new UntypedFormControl('', Validators.required),
   });
 
   public handleInput($event: Event) {
