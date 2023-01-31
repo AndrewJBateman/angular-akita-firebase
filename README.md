@@ -37,7 +37,7 @@
 
 ## :signal_strength: Technologies
 
-* [Angular framework v14](https://angular.io/)
+* [Angular framework v15](https://angular.io/)
 * [Google Firebase v9](https://firebase.google.com)
 * [@ngneat operator until-destroy v9](https://github.com/ngneat/until-destroy/#use-with-ivy) replaces [ngx-take-until-destroy](https://www.npmjs.com/package/ngx-take-until-destroy) to unsubscribe from observables when component destroyed, instead of using Angular ngDestroy lifecycle
 * [Akita State Management for JS v7](https://datorama.github.io/akita/)
